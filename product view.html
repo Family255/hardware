@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+           body{
+                background-color:indigo;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height: 100vh;
+                color:greenyellow
+            }
+            *{
+                font-family:sans-serif;
+                box-sizing:border-box;
+            }
+            form{
+                width:500px;
+                border: 2px solid #ccc;
+                padding: 30px;
+                background: #fff;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <body>
+      <form method="post" action="db.php">
+        <?php if (isset($_GET['error'])){?>
+          <p class="error"><?php echo $_GET['error'];?></p>
+        <?php } ?>
+            <p>Select a device which you want to view</p>
+        <ol>                                         
+           <li><b><a href="laptop">Laptop:</a></b></li>
+           <li><b><a href="printer">Printer:</a></b></li>
+           <li><b><a href="computer mouse">Computer Mouse:</a></b></li>
+           <li><b><a href="scanner">Scanner:</a></b></li>
+        </ol>
+      </form>
+    </body>
+</html>
